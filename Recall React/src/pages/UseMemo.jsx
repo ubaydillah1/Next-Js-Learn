@@ -1,3 +1,4 @@
+/* eslint-disable no-empty */
 import { useState, useMemo } from "react";
 
 const UseMemo = () => {
