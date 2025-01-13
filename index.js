@@ -1,7 +1,9 @@
-function createTriangle(iteration) {
-  for (let i = 1; i <= iteration; i++) {
-    console.log("*".repeat(i));
-  }
-}
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
-createTriangle(5);
+const newNumbers = numbers.map((number) => {
+  if (number === 3) {
+    return;
+  }
+  return number;
+});
+ 

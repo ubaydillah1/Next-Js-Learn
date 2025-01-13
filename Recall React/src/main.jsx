@@ -6,6 +6,7 @@ import UseMemo from "./pages/useMemo";
 import UseRef from "./pages/useRef";
 import DarkModeProvider from "./contexts/DarkMode";
 import UseContext from "./pages/useContext";
+import UseReducer from "./pages/useReducer";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -16,6 +17,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/usememo" element={<UseMemo />} />
           <Route path="/useref" element={<UseRef />} />
           <Route path="/usecontext" element={<UseContext />} />
+          <Route path="/usereducer" element={<UseReducer />} />
         </Routes>
       </Router>
     </DarkModeProvider>
