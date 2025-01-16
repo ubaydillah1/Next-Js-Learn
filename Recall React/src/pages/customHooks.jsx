@@ -1,5 +1,5 @@
-import useLocalStorage from "../customHooks/useLocalStorage";
-import useUpdateLogger from "../customHooks/useUpdateLogger";
+import useLocalStorage from "../hooks/useLocalStorage";
+import useUpdateLogger from "../hooks/useUpdateLogger";
 
 const CustomHooks = () => {
   const [name, setName] = useLocalStorage("name", "");
