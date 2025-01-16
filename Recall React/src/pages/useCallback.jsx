@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useState, useCallback } from "react";
 
 const UseCallback = () => {

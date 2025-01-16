@@ -8,6 +8,7 @@ import DarkModeProvider from "./contexts/DarkMode";
 import UseContext from "./pages/useContext";
 import UseReducer from "./pages/useReducer";
 import UseCallback from "./pages/useCallback";
+import CustomHooks from "./pages/customHooks";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -20,6 +21,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/usecontext" element={<UseContext />} />
           <Route path="/usereducer" element={<UseReducer />} />
           <Route path="/usecallback" element={<UseCallback />} />
+          <Route path="/customhooks" element={<CustomHooks />} />
         </Routes>
       </Router>
     </DarkModeProvider>
