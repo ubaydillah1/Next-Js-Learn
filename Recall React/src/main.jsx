@@ -10,6 +10,7 @@ import UseCallback from "./pages/useCallback";
 import CustomHooks from "./pages/customHooks";
 import UseMemo from "./pages/UseMemo";
 import UseLayoutEffect from "./pages/useLayoutEffect";
+import UseTransition from "./pages/useTransition";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -24,6 +25,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/usecallback" element={<UseCallback />} />
           <Route path="/customhooks" element={<CustomHooks />} />
           <Route path="/uselayouteffect" element={<UseLayoutEffect />} />
+          <Route path="/usetransition" element={<UseTransition />} />
         </Routes>
       </Router>
     </DarkModeProvider>
