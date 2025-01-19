@@ -2,13 +2,14 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import Home from "./pages/home";
-import UseMemo from "./pages/useMemo";
 import UseRef from "./pages/useRef";
 import DarkModeProvider from "./contexts/DarkMode";
 import UseContext from "./pages/useContext";
 import UseReducer from "./pages/useReducer";
 import UseCallback from "./pages/useCallback";
 import CustomHooks from "./pages/customHooks";
+import UseMemo from "./pages/UseMemo";
+import UseLayoutEffect from "./pages/useLayoutEffect";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -22,6 +23,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/usereducer" element={<UseReducer />} />
           <Route path="/usecallback" element={<UseCallback />} />
           <Route path="/customhooks" element={<CustomHooks />} />
+          <Route path="/uselayouteffect" element={<UseLayoutEffect />} />
         </Routes>
       </Router>
     </DarkModeProvider>
