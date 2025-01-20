@@ -11,6 +11,7 @@ import CustomHooks from "./pages/customHooks";
 import UseMemo from "./pages/UseMemo";
 import UseLayoutEffect from "./pages/useLayoutEffect";
 import UseTransition from "./pages/useTransition";
+import UseDefferedValue from "./pages/useDeferredValue";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -26,6 +27,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/customhooks" element={<CustomHooks />} />
           <Route path="/uselayouteffect" element={<UseLayoutEffect />} />
           <Route path="/usetransition" element={<UseTransition />} />
+          <Route path="/usedeferredvalue" element={<UseDefferedValue />} />
         </Routes>
       </Router>
     </DarkModeProvider>

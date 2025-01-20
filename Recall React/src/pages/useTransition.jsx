@@ -3,7 +3,7 @@ import { useState, useTransition } from "react";
 const UseTransition = () => {
   const [input, setInput] = useState("");
   const [list, setList] = useState([]);
-  const [isPending, startTransition] = useTransition("");
+  const [isPending, startTransition] = useTransition();
 
   const LIST_SIZE = 500;
 
