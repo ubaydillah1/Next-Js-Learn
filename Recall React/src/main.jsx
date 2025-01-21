@@ -13,6 +13,7 @@ import UseLayoutEffect from "./pages/useLayoutEffect";
 import UseTransition from "./pages/useTransition";
 import UseDefferedValue from "./pages/useDeferredValue";
 import UseImperativeHandle from "./pages/useImperativeHandle";
+import UseId from "./pages/useId";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -29,6 +30,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/uselayouteffect" element={<UseLayoutEffect />} />
           <Route path="/usetransition" element={<UseTransition />} />
           <Route path="/usedeferredvalue" element={<UseDefferedValue />} />
+          <Route path="/useid" element={<UseId />} />
           <Route
             path="/useimperativehandle"
             element={<UseImperativeHandle />}
