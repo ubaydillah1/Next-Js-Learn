@@ -14,6 +14,7 @@ import UseTransition from "./pages/useTransition";
 import UseDefferedValue from "./pages/useDeferredValue";
 import UseImperativeHandle from "./pages/useImperativeHandle";
 import UseId from "./pages/useId";
+import ReduxPage from "./pages/reduxPage";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -31,6 +32,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/usetransition" element={<UseTransition />} />
           <Route path="/usedeferredvalue" element={<UseDefferedValue />} />
           <Route path="/useid" element={<UseId />} />
+          <Route path="/redux" element={<ReduxPage />} />
           <Route
             path="/useimperativehandle"
             element={<UseImperativeHandle />}
