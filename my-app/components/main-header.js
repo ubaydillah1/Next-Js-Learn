@@ -38,6 +38,14 @@ const MainHeader = () => {
               Foodies Community
             </Link>
           </li>
+          <li className="transition duration-300 ease-in-out hover:text-shadow">
+            <Link
+              href="/meals/share"
+              // className={`${path.startsWith("/meals/share") && "text-shadow"}`}
+            >
+              Share Meals
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
