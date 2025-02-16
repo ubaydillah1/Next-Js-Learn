@@ -3,6 +3,11 @@ import { getMeals } from "@/lib/meals";
 import { Suspense } from "react";
 import MealsLoading from "./loading-out";
 
+export const metadata = {
+  title: "All Meals",
+  description: "Browse the delicious meals shared by our vibrant community.",
+};
+
 async function Meals() {
   const meals = await getMeals();
 
@@ -13,6 +18,7 @@ const MealsPage = () => {
   return (
     <main>
       <h1 className="font-bold text-[72px] text-center my-10">Meals Page</h1>
+
       <Suspense fallback={<MealsLoading />}>
         <Meals />
       </Suspense>
