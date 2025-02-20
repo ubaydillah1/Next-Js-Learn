@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { DUMMY_NEWS } from "../../../../dummy-news";
 import Image from "next/image";
 
@@ -38,12 +39,12 @@ const NewsDetailPage = async ({ params }) => {
       <p className="mt-4 text-gray-500 italic text-sm">
         Dipublikasikan pada: {newsItem.date}
       </p>
-      <a
+      <Link
         href="/news"
         className="mt-6 px-6 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition"
       >
         Kembali ke Berita
-      </a>
+      </Link>
     </article>
   );
 };
