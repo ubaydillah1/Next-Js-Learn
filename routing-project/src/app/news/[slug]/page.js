@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { DUMMY_NEWS } from "../../../../dummy-news";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
 const NewsDetailPage = async ({ params }) => {
   const { slug } = await params;
@@ -8,16 +9,7 @@ const NewsDetailPage = async ({ params }) => {
   const newsItem = DUMMY_NEWS.find((news) => news.slug === slug);
 
   if (!newsItem) {
-    return (
-      <div className="flex flex-col items-center justify-center min-h-screen">
-        <h1 className="text-3xl font-bold text-red-500">
-          Berita Tidak Ditemukan
-        </h1>
-        <p className="text-lg text-gray-500">
-          Silakan kembali ke halaman utama.
-        </p>
-      </div>
-    );
+    notFound();
   }
 
   return (
