@@ -2,21 +2,27 @@ import { Metadata } from "next";
 
 export const generateMetadata = async ({
   params,
-}: Props): Promise<Metadata> => {
+}: {
+  params: Promise<{ productId: string }>;
+}): Promise<Metadata> => {
+  const resolvedParams = await params;
+
+  if (!resolvedParams?.productId) {
+    throw new Error("Missing productId in params");
+  }
+
   return {
-    title: `Product Iphone ${(await params).productId}`,
+    title: `Product iPhone ${resolvedParams.productId}`,
   };
 };
 
-type Props = {
-  params: {
-    productId: string;
-  };
-};
-
-const DetailProductPage = ({ params }: Props) => {
-  const productId = params.productId;
-  return <div>Product {productId}</div>;
+const DetailProductPage = async ({
+  params,
+}: {
+  params: Promise<{ productId: string }>;
+}) => {
+  const resolvedParams = await params;
+  return <div>Product {resolvedParams.productId} haloha</div>;
 };
 
 export default DetailProductPage;

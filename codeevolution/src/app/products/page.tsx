@@ -12,4 +12,3 @@ const ProductList = () => {
 };
 
 export default ProductList;
-W;

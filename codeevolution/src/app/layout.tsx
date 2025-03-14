@@ -32,6 +32,7 @@ export default function RootLayout({
       >
         <header className="text-center text-[50px] my-10">Header</header>
         {children}
+        <br />
         <footer className="text-center text-[50px] my-10">Footer</footer>
       </body>
     </html>
