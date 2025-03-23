@@ -13,7 +13,7 @@ const LayoutDashboard = ({
   notifications: React.ReactNode;
   login: React.ReactNode;
 }) => {
-  const isLoggedIn = false;
+  const isLoggedIn = true;
 
   return isLoggedIn ? (
     <div className="max-w-6xl mx-auto p-4 min-w-fit text-center">

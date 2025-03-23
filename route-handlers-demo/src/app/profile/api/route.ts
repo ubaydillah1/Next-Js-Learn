@@ -2,14 +2,16 @@ import { NextRequest } from "next/server";
 import { headers, cookies } from "next/headers";
 
 export async function GET(request: NextRequest) {
+  // tidak disarankan
   const requestHeaders = new Headers(request.headers);
   console.log(requestHeaders.get("Authorization"));
 
   const headerList = await headers();
   console.log(headerList.get("Authorization"));
 
+  // tidak disarankan
   const theme = request.cookies.get("theme");
-  console.log(theme);
+  console.log("theme", theme);
 
   const cookieStore = await cookies();
   cookieStore.set("result", "20");
