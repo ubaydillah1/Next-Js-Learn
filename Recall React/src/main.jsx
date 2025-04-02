@@ -8,7 +8,7 @@ import UseContext from "./pages/useContext";
 import UseReducer from "./pages/useReducer";
 import UseCallback from "./pages/useCallback";
 import CustomHooks from "./pages/customHooks";
-import UseMemo from "./pages/UseMemo";
+import UseMemo from "./pages/useMemo";
 import UseLayoutEffect from "./pages/useLayoutEffect";
 import UseTransition from "./pages/useTransition";
 import UseDefferedValue from "./pages/useDeferredValue";

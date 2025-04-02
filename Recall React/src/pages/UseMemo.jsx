@@ -13,6 +13,7 @@ const UseMemo = () => {
 
   const slowFunction = (number) => {
     for (let i = 0; i < 140000000; i++) {}
+    console.log("Dipanggil");
     return number * 2;
   };
 
