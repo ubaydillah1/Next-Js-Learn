@@ -1,5 +1,4 @@
 // import { serverSideFunction } from "@/utils/server-utils";
-
 import ImageSliderComponent from "@/components/imageSlider";
 
 const ServerRoutePage = () => {
