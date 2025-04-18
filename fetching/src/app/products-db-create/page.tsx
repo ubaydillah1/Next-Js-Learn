@@ -7,6 +7,11 @@ import { FormState, createProduct } from "@/actions/products";
 export default function AddProductPage() {
   const initialState: FormState = {
     errors: {},
+    values: {
+      title: "",
+      price: "",
+      description: "",
+    },
   };
 
   const [state, formAction] = useActionState(createProduct, initialState);
@@ -23,6 +28,7 @@ export default function AddProductPage() {
           type="text"
           className="block w-full p-2 text-black border rounded"
           name="title"
+          defaultValue={state.values?.title || ""}
         />
       </label>
       {state.errors.title && (
@@ -34,6 +40,7 @@ export default function AddProductPage() {
           type="number"
           className="block w-full p-2 text-black border rounded"
           name="price"
+          defaultValue={state.values?.price || ""}
         />
       </label>
       {state.errors.price && (
@@ -44,6 +51,7 @@ export default function AddProductPage() {
         <textarea
           className="block w-full p-2 text-black border rounded"
           name="description"
+          defaultValue={state.values?.description || ""}
         />
       </label>
       {state.errors.description && (

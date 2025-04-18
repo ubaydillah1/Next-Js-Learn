@@ -5,7 +5,7 @@ const UseTransition = () => {
   const [list, setList] = useState([]);
   const [isPending, startTransition] = useTransition();
 
-  const LIST_SIZE = 500;
+  const LIST_SIZE = 90000;
 
   function handleChange(e) {
     setInput(e.target.value);

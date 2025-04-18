@@ -14,7 +14,6 @@ const Home = () => {
   const incrementNumber = useCallback(
     (n) => {
       setTimeout(() => {
-        console.log("Terpanggil");
         setResult(n * number);
       }, 2000);
     },
@@ -23,7 +22,7 @@ const Home = () => {
 
   useEffect(() => {
     incrementNumber(number);
-  }, [number]);
+  }, [number, incrementNumber]);
 
   const toggleTheme = () => {
     setTheme((prevTheme) =>

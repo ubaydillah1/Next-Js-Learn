@@ -5,7 +5,7 @@ const UseDeferredValue = () => {
   const deferredInput = useDeferredValue(input);
 
   const list = useMemo(() => {
-    const LIST_SIZE = 500;
+    const LIST_SIZE = 4000;
     const l = [];
     for (let i = 0; i < LIST_SIZE; i++) {
       l.push(deferredInput);
