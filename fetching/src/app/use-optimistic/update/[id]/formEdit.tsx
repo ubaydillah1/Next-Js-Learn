@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useActionState } from "react";
-import SubmitButton from "./submitButton";
-import { createProduct, FormDataState } from "../actions/action";
+import SubmitButton from "../../create/submitButton";
+import { FormDataState, editProduct } from "../../actions/action";
+import { Product } from "@prisma/client";
 
-const CreatePage = () => {
+const FormEdit = ({ product }: { product: Product }) => {
   const initialState: FormDataState = {
     errors: {},
     values: {
@@ -14,7 +15,9 @@ const CreatePage = () => {
     },
   };
 
-  const [state, formAction] = useActionState(createProduct, initialState);
+  const editProductBind = editProduct.bind(null, product.id);
+
+  const [state, formAction] = useActionState(editProductBind, initialState);
 
   return (
     <div>
@@ -30,7 +33,7 @@ const CreatePage = () => {
             type="text"
             id="title"
             name="title"
-            defaultValue={state.values.title}
+            defaultValue={product.title}
           />
           {state.errors.title && (
             <p className="text-red-500">{state.errors.title}</p>
@@ -43,7 +46,7 @@ const CreatePage = () => {
             type="number"
             id="price"
             name="price"
-            defaultValue={state.values.price}
+            defaultValue={product.price}
           />
           {state.errors.price && (
             <p className="text-red-500">{state.errors.price}</p>
@@ -57,7 +60,7 @@ const CreatePage = () => {
             type="text"
             id="description"
             name="description"
-            defaultValue={state.values.description}
+            defaultValue={product.description || ""}
           />
           {state.errors.description && (
             <p className="text-red-500">{state.errors.description}</p>
@@ -71,4 +74,4 @@ const CreatePage = () => {
   );
 };
 
-export default CreatePage;
+export default FormEdit;
