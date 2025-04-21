@@ -5,7 +5,7 @@ export async function generateStaticParams() {
     {
       id: "1",
     },
-    { 
+    {
       id: "2",
     },
     {
