@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const containerVariants = {
   hidden: {
     opacity: 0,
-    x: "100vw",
+    x: "10vw",
   },
 
   visible: {
@@ -14,6 +14,19 @@ const containerVariants = {
     transition: {
       type: "spring",
       delay: 0.5,
+    },
+  },
+};
+
+const nextVariants = {
+  hidden: {
+    x: -1000,
+  },
+  visible: {
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 120,
     },
   },
 };
@@ -55,9 +68,9 @@ const Base = ({ addBase, pizza }: { addBase: any; pizza: any }) => {
       {pizza.base && (
         <motion.div
           className="next"
-          initial={{ x: "-100vw" }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 120 }}
+          variants={nextVariants}
+          initial="hidden"
+          animate="visible"
         >
           <Link to="/toppings">
             <motion.button
