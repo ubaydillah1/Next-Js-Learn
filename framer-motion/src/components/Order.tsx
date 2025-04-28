@@ -34,3 +34,7 @@ const Order = ({ pizza }: { pizza: { base: string; toppings: string[] } }) => {
 };
 
 export default Order;
+
+// First form of me to better place or maybe somthing like i have to improve my code better than before
+
+// this is try number one after change the settings my recorder
