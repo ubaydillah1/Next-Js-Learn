@@ -38,7 +38,7 @@ const Toppings = ({
       className="toppings container"
       variants={containerVariants}
       initial="hidden"
-      animate="visible"
+      animate="visible" 
     >
       <h3>Step 2: Choose Toppings</h3>
       <ul>

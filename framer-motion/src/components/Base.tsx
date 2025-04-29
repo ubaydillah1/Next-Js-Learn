@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, Transition, Variants } from "framer-motion";
 
 const containerVariants = {
   hidden: {
@@ -17,6 +17,19 @@ const containerVariants = {
     },
   },
 };
+
+const buttonVariants = {
+  hover: {
+    scale: 1.1,
+    textShadow: "0px 0px 8px rgb(255,255,255)",
+    boxShadow: "0px 0px 8px rgb(255,255,255)",
+    transition: {
+      repeat: Infinity,
+      repeatType: "reverse",
+      duration: 0.4,
+    } as Transition,
+  },
+} as Variants;
 
 const nextVariants = {
   hidden: {
@@ -73,13 +86,7 @@ const Base = ({ addBase, pizza }: { addBase: any; pizza: any }) => {
           animate="visible"
         >
           <Link to="/toppings">
-            <motion.button
-              whileHover={{
-                scale: 1.1,
-                textShadow: "0px 0px 8px rgb(255,255,255)",
-                boxShadow: "0px 0px 8px rgb(255,255,255)",
-              }}
-            >
+            <motion.button variants={buttonVariants} whileHover="hover">
               Next
             </motion.button>
           </Link>
